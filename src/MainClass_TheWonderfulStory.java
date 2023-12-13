@@ -66,15 +66,15 @@ public class MainClass_TheWonderfulStory {
         neznayka.setClothes(dresses);
         neznayka.takeOffCloth("spacesuit");
         neznayka.takeOffCloth("clothes");
-        neznayka.lay(new Neznayka.Bed("rocket", true));
+        neznayka.lay("koyka");
         try {
             if (!neznayka.isCanMove())
                 throw new MoveException("character can't move");
         }catch (MoveException e){
             System.out.println("Neznayka can't move anymore");
-            int x[][] = {};
-
         }
+        neznayka.weaking("sickness");
+
 
 
 

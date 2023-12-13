@@ -6,6 +6,7 @@ import Interfaces.Dressable;
 import java.util.ArrayList;
 public class Neznayka extends Human implements Dressable {
     public static final Neznayka INSTANSE = new Neznayka();
+    private NeznaykaPower neznaykaPower = new NeznaykaPower(100);
     private ArrayList<String> clothes = new ArrayList<>();
     private boolean canMove;
     private Neznayka(){
@@ -59,33 +60,37 @@ public class Neznayka extends Human implements Dressable {
         }
     }
     //Lying
-    public static class Bed{
-        private String location;
-        private boolean comfortable;
-        public Bed(String location, boolean comfortable){
-            this.comfortable = comfortable;
-            this.location = location;
+    class NeznaykaPower{
+        private int point;
+        public NeznaykaPower(int point){
+            this.point = point;
         }
-        public void setLocation(String location) {
-            this.location = location;
+        public void setPoint(int point) {
+            this.point = point;
         }
-
-        public String getLocation() {
-            return location;
+        public int getPoint() {
+            return point;
         }
-
-        public void setComfortable(boolean comfortable) {
-            this.comfortable = comfortable;
-        }
-
-        public boolean isComfortable() {
-            return comfortable;
+        public boolean isWeak(){
+            if(canMove){
+                return point>100;
+            }else {
+                return point>50;
+            }
         }
     }
-    public void lay(Bed bed) {
-        this.setLocation(bed.getLocation());
+    public void lay(String bed) {
+        this.setLocation(bed);
         setCanMove(false);
-        System.out.println(getName() + " lay on bed in " + bed.getLocation() + ". It's " + (bed.isComfortable() ? "comfortable" : "not comfortable"));
+        System.out.println(getName() + " lay on " + bed);
+    }
+    public void weaking(String reason){
+        this.neznaykaPower.setPoint(neznaykaPower.getPoint()-20);
+        if (neznaykaPower.isWeak()){
+            System.out.println("Now Neznayka weak because of " + reason);
+        }else {
+            System.out.println("Now Neznayka stay strong despite of " + reason);
+        }
     }
 
 }
