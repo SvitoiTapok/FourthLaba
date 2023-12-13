@@ -4,33 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5be35185-ae7f-4a75-bb71-bf549bb9c92b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AbstractClasses/GroupCarry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AbstractClasses/Human.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Fucsia.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Material.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Neznayka.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Pilulkin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Seledochka.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/SingleGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Classes/Znayka.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Enums/MaterialsName.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/Called.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/Dressable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/Existing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/ICarry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/IFossily.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/ISpeak.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/Movable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/Objectable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainClass_TheWonderfulStory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UML.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/untitled.iml" afterDir="false" />
+    <list default="true" id="5be35185-ae7f-4a75-bb71-bf549bb9c92b" name="Changes" comment="First commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Classes/Material.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Classes/Material.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Exceprions/DencityException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Exceprions/DencityException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainClass_TheWonderfulStory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainClass_TheWonderfulStory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,18 +35,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultPlantUmlFileTemplate": "UML Sequence",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/Lenovo/IdeaProjects/FourthLaba/untitled/src",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Sequence&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/IdeaProjects/FourthLaba/untitled/src&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\IdeaProjects\FourthLaba\untitled\src" />
@@ -100,6 +78,42 @@
       <option name="presentableId" value="Default" />
       <updated>1702233675462</updated>
     </task>
+    <task id="LOCAL-00001" summary="First commit">
+      <option name="closed" value="true" />
+      <created>1702434393593</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702434393593</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="First commit" />
   </component>
 </project>

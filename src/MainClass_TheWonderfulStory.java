@@ -12,16 +12,29 @@ import java.util.Arrays;
 public class MainClass_TheWonderfulStory {
     public static void main(String[] args) {
         Astronaut FirstAstronaut = new Astronaut("cave", "Nil");
-        Material lunit = new Material(10000, MaterialsName.LUNIT);
-        Material antilunit = new Material(-10000, MaterialsName.ANTILUNIT);
-        try{
-            if(lunit.getMassPerMeter3() < 0)
-                throw new DencityException();
-            else
-                System.out.println("Lunit have correct dencity");
+        Material lunit = new Material(MaterialsName.LUNIT);
+        try {
+            lunit.setMassPerMeter3(10000);
         }catch (DencityException e){
-            System.out.println("Lunit have positive dencity");
+            System.out.println("Lunit must have positive dencity");
+            System.exit(0);
         }
+
+        Material antilunit = new Material(MaterialsName.ANTILUNIT);
+        try {
+            antilunit.setMassPerMeter3(20000);
+        }catch (DencityException e){
+            System.out.println("Antilunit must have positive dencity");
+            System.exit(0);
+        }
+        //try{
+        //    if(lunit.getMassPerMeter3() < 0)
+        //        throw new DencityException();
+        //    else
+        //        System.out.println("Lunit have correct dencity");
+        //}catch (DencityException e){
+        //    System.out.println("Lunit have positive dencity");
+        //}
         FirstAstronaut.mine(lunit, 200);
         FirstAstronaut.mine(antilunit, 200);
         Sound noSound = new Sound("") {
@@ -59,7 +72,11 @@ public class MainClass_TheWonderfulStory {
                 throw new MoveException("character can't move");
         }catch (MoveException e){
             System.out.println("Neznayka can't move anymore");
+            int x[][] = {};
+
         }
+
+
 
 
     }

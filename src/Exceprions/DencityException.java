@@ -1,4 +1,4 @@
 package Exceprions;
 
-public class DencityException extends Error{
+public class DencityException extends RuntimeException{
 }
