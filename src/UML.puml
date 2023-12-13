@@ -1,0 +1,170 @@
+@startuml
+scale max 4000 width
+class MainClass_TheWonderfulStory {
++static void main(String[] args)
+}
+MainClass_TheWonderfulStory --down[#AAA]-o Classes.Astronaut
+MainClass_TheWonderfulStory -down[#AAA]--o Classes.Material
+MainClass_TheWonderfulStory -down[#AAA]-o Classes.Material
+MainClass_TheWonderfulStory -down[#AAA]--o Exceprions.DencityException
+MainClass_TheWonderfulStory -down[#AAA]-o AbstractClasses.Sound
+MainClass_TheWonderfulStory --down[#AAA]-o Classes.SingleGroup
+MainClass_TheWonderfulStory -down[#AAA]--o Exceprions.MoveException
+
+interface Interfaces.Called {
++String getName()
++void setName(String name)
+}
+
+
+interface Interfaces.Dressable {
++ArrayList<String> getClothes()
++void setClothes(ArrayList<String> clothes)
++void showClothes()
++void takeOffCloth(String cloth)
+}
+
+
+interface Interfaces.Existing {
++String getLocation()
++void setLocation(String location)
+}
+
+
+interface Interfaces.ICarry extends Interfaces.Called {
++void carry(Objectable objectable, String newPlace)
+}
+
+
+interface Interfaces.IFossily {
++void productes(Material material, int time)
+}
+
+
+interface Interfaces.ISpeak {
++void say(String phrase)
+}
+
+
+interface Interfaces.Movable {
++void move(String newLocation)
+}
+
+
+interface Interfaces.Objectable extends Interfaces.Movable, Interfaces.Called, Interfaces.Existing {
+
+}
+
+
+class Exceprions.DencityException extends Error {
+
+}
+
+
+class Exceprions.MoveException extends Exception {
++MoveException(String message)
+}
+
+
+enum Enums.MaterialsName {
+LUNIT, ANTILUNIT
+}
+
+
+class Classes.Astronaut extends AbstractClasses.Human {
++Astronaut(String location, String name)
++String toString()
++void mine(Material material, int time)
+}
+
+
+class Classes.Fucsia extends AbstractClasses.Human implements Interfaces.ICarry {
++static final Fucsia INSTANSE = new Fucsia()
+-Fucsia()
++void carry(Objectable movable, String newPlace)
+}
+Classes.Fucsia -down[#AAA]-o Classes.Fucsia
+
+class Classes.Material {
+-int massPerMeter3
+-MaterialsName materialsName
++Material(int massPerMeter3, MaterialsName materialsName)
++int getMassPerMeter3()
++void setMassPerMeter3(int massPerMeter3)
++MaterialsName getMaterialsName()
++void setMaterialsName(MaterialsName materialsName)
+}
+
+
+class Classes.Neznayka extends AbstractClasses.Human implements Interfaces.Dressable {
++static final Neznayka INSTANSE = new Neznayka()
+-ArrayList<String> clothes = new ArrayList<>()
+-boolean canMove
+-Neznayka()
++void setCanMove(boolean canMove)
++boolean isCanMove()
++ArrayList<String> getClothes()
++void setClothes(ArrayList<String> clothes)
++void showClothes()
++void takeOffCloth(String cloth)
++static class Bed
++void lay(Bed bed)
+}
+Classes.Neznayka -down[#AAA]--o Classes.Neznayka
+
+class Classes.Pilulkin extends AbstractClasses.Human implements Interfaces.ICarry {
++static final Pilulkin INSTANSE = new Pilulkin()
+-Pilulkin()
++void carry(Objectable movable, String newPlace)
+}
+Classes.Pilulkin -down[#AAA]-o Classes.Pilulkin
+
+class Classes.Seledochka extends AbstractClasses.Human implements Interfaces.ICarry {
++static final Seledochka INSTANSE = new Seledochka()
+-Seledochka()
++void carry(Objectable movable, String newPlace)
+}
+Classes.Seledochka --down[#AAA]-o Classes.Seledochka
+
+class Classes.SingleGroup extends AbstractClasses.GroupCarry {
++SingleGroup(ArrayList<ICarry> Carries)
+}
+
+
+class Classes.Znayka extends  AbstractClasses.Human implements Interfaces.ICarry, Interfaces.ISpeak {
++static final Znayka INSTANSE = new Znayka()
+-Znayka()
++void carry(Objectable movable, String newPlace)
++void say(String phrase)
+}
+Classes.Znayka -down[#AAA]--o Classes.Znayka
+
+abstract class AbstractClasses.GroupCarry {
+-ArrayList<ICarry> Carries
++GroupCarry(ArrayList<ICarry> Carries)
++ArrayList<ICarry> getCarriers()
++void setCarriers(ArrayList<ICarry> Carries)
++void groupCarry(Objectable objectable, String newPlace)
+}
+
+
+abstract class AbstractClasses.Human implements Interfaces.Objectable {
+-String name = "Someone Unknown"
+-String location = "Somewhere"
++void setName(String name)
++String getName()
++String getLocation()
++void setLocation(String location)
++String toString()
++boolean equals(Object obj)
++int hashCode()
++void move(String newLocation)
+}
+
+
+abstract class AbstractClasses.Sound {
+-String tune
++Sound(String tune)
++void sound()
+}
+@enduml
