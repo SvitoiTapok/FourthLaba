@@ -1,0 +1,141 @@
+@startuml
+class MainClass_TheWonderfulStory {
++ {static} void main(String[])
+}
+enum Enums.MaterialsName {
++  LUNIT
++  ANTILUNIT
+}
+interface Interfaces.Objectable {
+}
+class Classes.Astronaut {
++ String toString()
++ void mine(Material,int)
+}
+class Classes.Fossiler {
++ void productes(Material,int)
+}
+interface Interfaces.Called {
++ String getName()
++ void setName(String)
+}
+interface Interfaces.Dressable {
++ ArrayList<String> getClothes()
++ void setClothes(ArrayList<String>)
++ void showClothes()
++ void takeOffCloth(String)
+}
+class Classes.Material {
+- int massPerMeter3
+- MaterialsName materialsName
++ int getMassPerMeter3()
++ void setMassPerMeter3(int)
++ MaterialsName getMaterialsName()
++ void setMaterialsName(MaterialsName)
+}
+class Exceprions.MoveException {
+}
+interface Interfaces.ICarry {
++ void carry(Objectable,String)
+}
+class Classes.Znayka {
++ {static} Znayka INSTANSE
++ void carry(Objectable,String)
++ void say(String)
+}
+class Classes.Fucsia {
++ {static} Fucsia INSTANSE
++ void carry(Objectable,String)
+}
+interface Interfaces.Existing {
++ String getLocation()
++ void setLocation(String)
+}
+interface Interfaces.ISpeak {
++ void say(String)
+}
+class Classes.SingleGroup {
+}
+interface Interfaces.Movable {
++ void move(String)
+}
+abstract class AbstractClasses.Sound {
+- String tune
++ void sound()
+}
+class Classes.Neznayka {
++ {static} Neznayka INSTANSE
+- NeznaykaPower neznaykaPower
+- ArrayList<String> clothes
+- boolean canMove
++ void setCanMove(boolean)
++ boolean isCanMove()
++ ArrayList<String> getClothes()
++ void setClothes(ArrayList<String>)
++ void showClothes()
++ void takeOffCloth(String)
++ void lay(String)
++ void weaking(String)
+}
+class Classes.Neznayka$NeznaykaPower {
+- int point
++ void setPoint(int)
++ int getPoint()
++ boolean isWeak()
+}
+class Classes.Pilulkin {
++ {static} Pilulkin INSTANSE
++ void carry(Objectable,String)
+}
+interface Interfaces.IFossily {
++ void productes(Material,int)
+}
+abstract class AbstractClasses.Human {
+- String name
+- String location
++ void setName(String)
++ String getName()
++ String getLocation()
++ void setLocation(String)
++ String toString()
++ boolean equals(Object)
++ int hashCode()
++ void move(String)
+}
+class Classes.Seledochka {
++ {static} Seledochka INSTANSE
++ void carry(Objectable,String)
+}
+abstract class AbstractClasses.GroupCarry {
+- ArrayList<ICarry> Carries
++ ArrayList<ICarry> getCarriers()
++ void setCarriers(ArrayList<ICarry>)
++ void groupCarry(Objectable,String)
+}
+class Exceprions.DencityException {
+}
+
+
+Interfaces.Movable <|-- Interfaces.Objectable
+Interfaces.Called <|-- Interfaces.Objectable
+Interfaces.Existing <|-- Interfaces.Objectable
+AbstractClasses.Human <|-- Classes.Astronaut
+Classes.IFossily <|.. Classes.Fossiler
+Exceprions.Exception <|-- Exceprions.MoveException
+Interfaces.Called <|-- Interfaces.ICarry
+Interfaces.ICarry <|.. Classes.Znayka
+Interfaces.ISpeak <|.. Classes.Znayka
+Classes.Human <|-- Classes.Znayka
+Interfaces.ICarry <|.. Classes.Fucsia
+Classes.Human <|-- Classes.Fucsia
+Classes.GroupCarry <|-- Classes.SingleGroup
+Interfaces.Dressable <|.. Classes.Neznayka
+Classes.Human <|-- Classes.Neznayka
+Classes.Neznayka +.. Classes.Neznayka$NeznaykaPower
+Interfaces.ICarry <|.. Classes.Pilulkin
+Classes.Human <|-- Classes.Pilulkin
+AbstractClasses.Objectable <|.. AbstractClasses.Human
+Interfaces.ICarry <|.. Classes.Seledochka
+Classes.Human <|-- Classes.Seledochka
+Exceprions.RuntimeException <|-- Exceprions.DencityException
+@enduml
